@@ -71,7 +71,7 @@ for i in farm_band:
         i.wolf_voice()
 '''
 #3
-
+'''
 class Animal: 
     legs=4
     tail=1
@@ -97,3 +97,51 @@ wolf1,wolf2=Wolf(),Wolf()
 farm_band=[cat1,cat2,dog1,dog2,wolf1,wolf2]
 for i in farm_band:
     i.voice()
+'''
+import math
+
+class Shape:
+    def area(self):
+        pass
+
+    def perimeter(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    def perimeter(self):
+        return 2 * (self.width + self.height)
+    
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius = radius
+
+
+    def area(self):
+        return math.pi * self.radius**2
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+# viena izvades metode
+C1=Circle(1.5)
+
+print(C1.area())
+print(C1.perimeter())
+
+#Geometrisko figuru sarkaksts
+shapes=[Rectangle(3,4),Circle(5)]
+
+for shape in shapes:
+    print(f"Area : {shape.area():.2f},Perimeter:{shape.perimeter():.2f}")
+
+
+    
+
+
